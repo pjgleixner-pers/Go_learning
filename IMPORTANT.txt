@@ -1,0 +1,3 @@
+run in terminal:
+	go mod init <name of project>
+before everithing if not you'll get an error.
