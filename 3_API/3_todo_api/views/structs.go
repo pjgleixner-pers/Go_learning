@@ -7,5 +7,5 @@ type Response struct {
 
 type PostRequest struct {
 	Name string `json:"name"`
-	Todo string `json:"todo`
+	Todo string `json:"todo"`
 }
