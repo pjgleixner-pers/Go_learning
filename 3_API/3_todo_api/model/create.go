@@ -2,8 +2,8 @@ package model
 
 import "fmt"
 
-func CreateTodo() error {
-	insertQ, err := con.Query("INSERT INTO TODO VALUES(?, ?)", "asdf", "thisvideo")
+func CreateTodo(name, todo string) error {
+	insertQ, err := con.Query("INSERT INTO TODO VALUES(?, ?)", name, todo)
 	defer insertQ.Close()
 	if err != nil {
 		fmt.Println(err)
