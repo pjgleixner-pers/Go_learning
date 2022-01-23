@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-func create() http.HandlerFunc {
+func crud() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		if r.Method == http.MethodPost {
 			data := views.PostRequest{}
@@ -45,7 +45,7 @@ func create() http.HandlerFunc {
 			}
 			w.WriteHeader(http.StatusOK)
 			json.NewEncoder(w).Encode(struct {
-				Status string `json:status`
+				Status string `json:"status"`
 			}{"Item deleted"})
 		}
 
